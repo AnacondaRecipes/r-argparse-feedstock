@@ -1,4 +1,4 @@
-{% set version = '1.0.7' %}
+{% set version = '1.1.0' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/argparse_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/argparse/argparse_{{ version }}.tar.gz
-  sha256: 1a2b2d1721260eadc6833c382f739bf50858cc9130ea2308db2195fd911d01de
+  sha256: 2af94483a46ef53728cbbc828f96697d8dc2885738f09d0970e208a616851403
 
 
   # patches:
@@ -34,15 +34,15 @@ requirements:
     - r-base
     - r-findpython
     - r-getopt >=1.19
+    - r-jsonlite
     - r-proto
-    - r-rjson
 
   run:
     - r-base
     - r-findpython
     - r-getopt >=1.19
+    - r-jsonlite
     - r-proto
-    - r-rjson
 
 test:
   commands:
@@ -74,7 +74,7 @@ extra:
 # Package: argparse
 # Type: Package
 # Title: Command Line Optional and Positional Argument Parser
-# Version: 1.0.7
+# Version: 1.1.0
 # Author: Trevor L Davis. Ports examples from the argparse Python module by the Python Software Foundation. Ports examples from the getopt package by Allen Day.
 # Maintainer: Trevor L Davis <trevor.l.davis@gmail.com>
 # Description: A command line parser to be used with Rscript to write "#!" shebang scripts that gracefully accept positional and optional arguments and automatically generate usage.
@@ -83,16 +83,15 @@ extra:
 # URL: https://github.com/trevorld/argparse
 # BugReports: https://github.com/trevorld/argparse/issues
 # LazyLoad: yes
-# Depends: proto
-# Imports: findpython, getopt (>= 1.19), rjson
-# SystemRequirements: python (>= 2.7)
+# Imports: proto, findpython, getopt (>= 1.19), jsonlite
+# SystemRequirements: python (>= 3.2)
 # Suggests: knitr (>= 1.15.19), testthat
 # VignetteBuilder: knitr
 # RoxygenNote: 6.0.1
 # NeedsCompilation: no
-# Packaged: 2017-08-22 22:46:37 UTC; trevorld
+# Packaged: 2017-11-29 23:10:21 UTC; trevorld
 # Repository: CRAN
-# Date/Publication: 2017-08-23 03:05:28 UTC
+# Date/Publication: 2017-11-29 23:20:13 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
