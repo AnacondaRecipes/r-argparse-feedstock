@@ -10,8 +10,8 @@ package:
 source:
   fn: argparse_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/argparse_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/argparse/argparse_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/argparse_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/argparse/argparse_{{ version }}.tar.gz
   sha256: 2af94483a46ef53728cbbc828f96697d8dc2885738f09d0970e208a616851403
 
 
