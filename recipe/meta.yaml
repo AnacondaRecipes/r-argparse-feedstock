@@ -8,7 +8,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: argparse_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/argparse_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/argparse/argparse_{{ version }}.tar.gz
@@ -27,6 +26,7 @@ build:
 # Suggests: knitr (>= 1.15.19), testthat
 requirements:
   build:
+    - {{posix}}zip               # [win]
 
   host:
     - r-base
